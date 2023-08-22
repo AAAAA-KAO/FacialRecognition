@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>用户登录</title>
+    <style>
+        body{
+            background-image: url("../static/唯娱文化.jpg");
+            background-size: cover;
+        }
+
+        p{
+            color: white;
+            font-size: 25px;
+        }
+
+        div{
+            width: 500px;
+            height: 400px;
+            position: absolute;
+            top: 300px;
+            left: 550px;
+            text-align: center;
+        }
+
+        .input1{
+            width: 300px;
+            height: 50px;
+            font-size: 30px;
+            background-color: rgba(255,255,255,.5);
+        }
+
+        .input2{
+            width: 100px;
+            height: 50px;
+            font-size: 30px;
+            background-color: rgba(255,255,255,.5);
+            color: blue;
+        }
+
+        .input2:hover{
+            color: white;
+            background-color: rgba(0,0,255,.5);
+        }
+
+    </style>
+</head>
+<body>
+    <div>
+        <form action="/logged" method="post">
+            <p>用户名：<input type="text" class="input1" name="username"></p>
+            <p>密码：<input type="password" class="input1" name="password"></p>
+            <input type="submit" class="input2" value="登录">
+            <input type="reset" class="input2">
+        </form>
+    </div>
+</body>
+</html>

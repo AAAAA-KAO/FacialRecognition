@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body{
+            background-image: url("../static/唯娱文化.jpg");
+            background-size: cover;
+        }
+
+        div{
+            text-align: center;
+            position: absolute;
+            top: 350px;
+            left: 530px;
+            width: 600px;
+            height: 400px;
+        }
+
+        th{
+            color: white;
+        }
+
+        td{
+            color: white;
+        }
+
+    </style>
+</head>
+<body>
+    <div>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>用户名</th>
+                    <th>今日打卡次数</th>
+                    <th>今日正常打卡次数</th>
+                    <th>今日异常打卡次数</th>
+                    <th>今日缺卡次数</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>{{username}}</td>
+                    {% for i in content %}
+                        <td>{{i}}</td>
+                    {% endfor %}}
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body{
+            background-image: url("../static/唯娱文化.jpg");
+            background-size: cover;
+        }
+        h1{
+            color: white;
+            font-family: 楷体;
+            display: inline;
+            font-size: 40px;
+        }
+        h2{
+            color: white;
+            display: inline;
+            position: absolute;
+            left: 700px;
+            top: 0;
+        }
+        hr{
+            color: rgba(255,255,255,0.5);
+        }
+        a{
+            text-decoration: none;
+            width: 100px;
+            height: 50px;
+            display: inline-block;
+            line-height: 50px;
+            color: blue;
+            background-color: rgba(255,255,255,0.3);
+            text-align: center;
+        }
+        .btn{
+            margin: 8px auto;
+            flex-shink: 0;
+            width: 100px;
+            height: 50px;
+        }
+        .btn1{
+            margin: 8px auto;
+            flex-shink: 0;
+            width: 250px;
+            height: 100px;
+        }
+        .circle{
+            border-radius: 64px;
+            background: rgba(255,255,255,0.5);
+        }
+        a:hover{
+            background-color: rgba(0,0,255,0.3);
+            color: white;
+        }
+        .apos1{
+            position: absolute;
+            top: 0;
+            right: 50px;
+        }
+        .apos2{
+            position: absolute;
+            top: 0;
+            right: 160px;
+        }
+        h3{
+            color: white;
+        }
+        .div1{
+            width: 400px;
+            height: 600px;
+            background-color: rgba(255,255,255,0.2);
+            position: absolute;
+            left: 250px;
+            text-align: center;
+            display: inline-block;
+        }
+        .div2{
+            width: 400px;
+            height: 175px;
+            background-color: rgba(255,255,255,0.2);
+            position: absolute;
+            left: 250px;
+            top: 700px;
+            text-align: center;
+        }
+        .div3{
+            width: 300px;
+            height: 100px;
+            margin: 0 auto;
+            text-align: left;
+        }
+        /* 制作轮播图 */
+        .div4{
+            position: absolute;
+            left: 730px;
+        }
+        .imgBox{
+                border-top: 2px solid cadetblue;
+                width: 666px;
+                height: 374px;
+                margin: 0 auto;
+                background-color: rgba(255,255,255,0.2);
+            }
+
+        .imgBox img{
+            width: 600px;
+            height: 300px;
+            margin: 0 auto;
+            padding-top: 30px;
+        }
+
+        .img1{
+            display: block;
+            width: 333px;
+            height: 187px;
+        }
+
+        .img2{
+            display: none;
+            width: 333px;
+            height: 187px;
+        }
+
+        .img3{
+            display: none;
+            width: 333px;
+            height: 216px;
+        }
+
+        .div5{
+            width: 500px;
+            height: 300px;
+            position: absolute;
+            top: 500px;
+            left: 800px;
+            background-color: rgba(255,255,255,0.2);
+            text-align: center;
+        }
+
+        /*签到打卡标签*/
+        .a1{
+            line-height: 100px;
+            font-size: 20px;
+            position: absolute;
+            top: 100px;
+            left: 120px;
+        }
+
+        th{
+            color: white;
+        }
+
+        td{
+            color: white;
+        }
+
+        table{
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>&nbsp&nbsp&nbsp未来科技</h1>
+    <h2>Always do your best!</h2>
+    <a href="http://127.0.0.1:5000/login" class="circle btn apos1">登录</a>
+    <a href="http://127.0.0.1:5000/register" class="circle btn apos2">注册</a>
+    <br>
+    <hr>
+    <div class="div1">
+        <h3>企业介绍</h3>
+        <img src="../static/企业介绍.jpg">
+        <br><br>
+        <div class="div3">
+            <p style="color: white; text-indent: 2em;">航空航天是人类拓展大气层和宇宙空间的产物。经过百余年的快速发展，航空航天已经
+                成为21世纪最活跃和最有影响的科学技术领域之一，该领域取得的重大成就标志着人类文明的最新发展，也表征着一个国家科学技术的先进
+                水平。</p>
+        </div>
+    </div>
+    <div class="imgBox div4">
+        <img src="../static/飞机1.jpg" alt="无图片" class="img1 img-slide">
+        <img src="../static/飞机2.jpg" alt="无图片" class="img2 img-slide">
+        <img src="../static/火箭.jpg" alt="无图片" class="img3 img-slide">
+    </div>
+    <br>
+    <div class="div2">
+        <h3>成员信息</h3>
+        <table border="1">
+            <thead>
+                <th>编号</th>
+                <th>姓名</th>
+                <th>职位</th>
+                <th>打卡次数</th>
+            </thead>
+            <tbody>
+                {% for i in content %}
+                    <tr>
+                        {% for j in i %}
+                            <td>{{j}}</td>
+                        {% endfor %}
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    <div class="div5">
+        <a href="http://127.0.0.1:5000/check" class="circle btn1 a1">签到打卡</a>
+    </div>
+</body>
+<script type="text/javascript">
+    var index=0;
+    //效果
+    function ChangeImg() {
+        index++;
+        var a=document.getElementsByClassName("img-slide");
+        if(index>=a.length) index=0;
+        for(var i=0;i<a.length;i++){
+            a[i].style.display='none';
+        }
+        a[index].style.display='block';
+    }
+    //设置定时器，每隔两秒切换一张图片
+    setInterval(ChangeImg,3000);
+</script>
+</html>

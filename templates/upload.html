@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>上传文件识别</title>
+    <style>
+        body{
+            background-image: url("../static/唯娱文化.jpg");
+            background-size: cover;
+        }
+        .file{
+            color: white;
+            font-size: 30px;
+        }
+        .center{
+            text-align: center; /*让div内部文字居中*/
+	        border-radius: 20px;
+	        width: 300px;
+	        height: 350px;
+	        margin: auto;
+	        position: absolute;
+	        top: 0;
+	        left: 0;
+	        right: 0;
+	        bottom: 0;
+        }
+        .btn{
+            margin: 8px auto;
+            flex-shink: 0;
+            width: 160px;
+            height: 64px;
+        }
+        .circle{
+            border-radius: 64px;
+            background: rgba(255,255,255,0.5);
+        }
+        .submit{
+            font-size: 20px;
+            color: blue;
+        }
+        .submit:hover{
+            background-color: rgba(0,0,255,0.3);
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="center">
+        <form action="{{url_for('upload')}}" method="post" enctype="multipart/form-data">
+            <input type="file" class="file" name="photo">
+            <br><br><br><br>
+            <input type="submit" class="btn circle submit">
+        </form>
+    </div>
+</body>
+</html>

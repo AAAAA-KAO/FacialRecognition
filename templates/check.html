@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body{
+            background-image: url("../static/唯娱文化.jpg");
+            background-size: cover;
+        }
+        .center{
+            text-align: center; /*让div内部文字居中*/
+	        border-radius: 20px;
+	        width: 300px;
+	        height: 350px;
+	        margin: auto;
+	        position: absolute;
+	        top: 0;
+	        left: 0;
+	        right: 0;
+	        bottom: 0;
+        }
+        a{
+            text-decoration: none;
+            width: 100px;
+            height: 50px;
+            display: inline-block;
+            line-height: 64px;
+            color: blue;
+            background-color: rgba(255,255,255,0.3);
+        }
+        a:hover{
+            background-color: rgba(0,0,255,0.3);
+            color: white;
+        }
+        .btn{
+            margin: 8px auto;
+            flex-shink: 0;
+            width: 160px;
+            height: 64px;
+        }
+        .circle{
+            border-radius: 64px;
+            background: rgba(255,255,255,0.5);
+        }
+    </style>
+</head>
+<body>
+    <div class="center">
+        <a href="http://127.0.0.1:5000/she" class="btn circle">在线识别</a>
+        <br><br><br><br><br><br><br><br><br><br><br>
+        <a href="http://127.0.0.1:5000//upload" class="btn circle">上传文件识别</a>
+    </div>
+</body>
+</html>

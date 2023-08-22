@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body{
+            background-image: url("../static/唯娱文化.jpg");
+            background-size: cover;
+        }
+
+        p{
+            color: white;
+            font-size: 30px;
+        }
+
+        a{
+            text-decoration: none;
+            width: 100px;
+            height: 50px;
+            display: inline-block;
+            line-height: 50px;
+            color: blue;
+            background-color: rgba(255,255,255,0.3);
+            text-align: center;
+        }
+
+        a:hover{
+            background-color: rgba(0,0,255,0.3);
+            color: white;
+        }
+
+        div{
+            text-align: center;
+        }
+
+        .btn{
+            margin: 8px auto;
+            flex-shink: 0;
+            width: 100px;
+            height: 50px;
+        }
+
+        .circle{
+            border-radius: 64px;
+            background: rgba(255,255,255,0.5);
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p>用户名或密码错误,请检查密码或注册账户</p>
+        <a href="http://127.0.0.1:5000/register" class="btn circle">注册</a>
+        <a href="http://127.0.0.1:5000/login" class="btn circle">返回</a>
+    </div>
+</body>
+</html>
